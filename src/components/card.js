@@ -8,35 +8,26 @@ class Card extends Component {
         super()
 
         this.state = {
-            color: 'Blue',
+            color: '',
             pluralNoun: '',
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleInputChange() {
-        console.log('this is the value')
-        this.setState({ color: event.target.value })  
+    handleInputChange(event) {
+        console.log(this.state)
+        this.setState({ [event.target.name]: event.target.value })  
 }
 
-
     render() {
-
         return(
             <div className='card'>
                 <h1>{this.state.color}</h1>
-                <input value={this.state.color} onChange={(event) => this.handleInputChange(event)}/>
-            </div>
-        )
-    // I believe this is no longer used
-        return (
-            <div className="card">
-                { Input('Color') }
-                { Input('Plural Noun') }
+                { Input('Color', this.state.color,this.handleInputChange, 'color' ) }
+                { Input('Plural Noun', this.state.pluralNoun, this.handleInputChange, 'pluralNoun') }
             </div>
          )
-    //end no longer used
     }
 }
 
