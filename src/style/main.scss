@@ -1,5 +1,6 @@
 .home {
     position: relative;
+
     background-color: rgba(207, 207, 207, 0.06);
     display: grid;
 
@@ -9,6 +10,9 @@
 }
 
 .header {
+    color:white;
+    font-family: 'Montserrat';
+    text-align: center;
     align-self: center;
     &__skew {
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
@@ -22,20 +26,34 @@
         width: 100vw;
         background-color: #444444;
          }
-         
         &__border {
-        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
-        clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+            clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
 
-        z-index: -10;
-        top: 0;
-        left: 0;
-        position: absolute;
-        height: 110vh;
-        width: 100vw;
-        background-color: #00CB79;
-    }
+            z-index: -10;
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 110vh;
+            width: 100vw;
+            background-color: #00CB79;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 44px;
+        }
+
+        p {
+            color: rgba(255,255,255,0.75);
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 19px;
+            width: 403px;
+        }
 }
+
 
 .card {
     min-height: 736px;
@@ -46,9 +64,9 @@
 
     display: grid;
     grid-template-rows: 1fr 50px;
-
+    background-color: white;
     &__inputs {
-        background-color: skyblue;
+        // background-color: skyblue;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
